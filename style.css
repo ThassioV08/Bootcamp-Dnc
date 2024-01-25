@@ -58,87 +58,210 @@
                     cursor: pointer;
                 }
                 
-                /* Seção Principal do Site*/ 
+    /* Seção Principal do Site*/             
 
-                section {
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top        : 100px;
+            margin-bottom: 100px;            
+        }
+        header{
+            color: white;
+            font-family: var(--fonte-padrao);
+        }
+        header h1 {
+            font-size: 80px;
+            font-weight: 800px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        header h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700px;
+            margin-bottom: 100px;
+        }
+        header .invert{
+            background-color: black;
+            font-weight: bold;
+            padding: 5px;
+        }            
+
+    /* Formulário */
+
+        form {
+         color: white;
+         font-size: 30px;
+         font-weight: 600px;
+         font-family: var(--fonte-padrao);
+         width: 600px;
+        }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            form input {
+                border-radius: 10px;
+                border: 0px;
+                height: 30px;
+                font-size: 20px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.90);
+            }
+            form label {
+                margin: 10px 0px 10px 0px;
+            }
+            form input::placeholder {
+                color: #39393980;
+            }
+            .checkbox-itens label {
+                font-size: 25px;
+            }
+            .checkbox-itens {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            input[type="checkbox"] {
+                transform: scale(1.7);
+            }
+            input[type="submit"]{
+                background-color: #0C70F2E5;
+                width: 100%;
+                height: 56px;
+                color: white;
+                font-size: 32px;
+                margin-top: 100px;
+                box-shadow: 0px 6px 4px 0px rgba(12, 112, 242, 0.25);
+                cursor: pointer;
+                margin-bottom: 100px;
+            }
+
+    /* Footer */
+
+        footer {
+            width: 100%;
+            background-color: var(--azul-dnc);
+        }
+            footer .linha1 {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+                footer ul {
+                    list-style: none;
+                    margin: 0px;
+                    padding: 0px;
+                }
+                footer nav {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: center;
-                    margin-top: 100px;
-                    margin-bottom: 100px;
+                    height: 330px;
                 }
-                    header{
-                        color: white;
-                        font-family: var(--fonte-padrao);
-                    }
-                    header h1 {
-                        font-size: 80px;
-                        font-weight: 800px;
-                        text-transform: uppercase;
-                        margin-bottom: 20px;
-                        text-align: center;
-                    }
-                    header h2 {
-                        text-align: center;
-                        font-size: 40px;
-                        font-weight: 700px;
-                        margin-bottom: 100px;
-                    }
-                    header .invert{
-                        background-color: black;
-                        font-weight: bold;
-                        padding: 5px;
-                    }
+                footer h5 {
+                    text-align: center;
+                    color: white;
+                    font-weight: 800px;
+                    font-size: 18px;
+                    font-family: var(--fonte-padrao);
+                    background-color: var(--preto-dnc);
+                    border-radius: 10px;
+                    padding: 10px 10px 10px 10px;
+                    margin-bottom: 15px;
+                }
+                footer ul li {
+                    text-align: center;
+                    color: white;
+                    font-weight: 600px;
+                    font-size: 18px;
+                    font-family: var(--fonte-padrao);
+                    margin: 20px 0px 20px 0px;
+                }
+                footer ul li a {
+                    color: white;
+                    text-decoration: none;
+                }
+                footer .endereco {
+                    font-weight: 600px;
+                    font-size: 18px;
+                    font-family: var(--fonte-padrao);
+                    color: white;
+                    width: 25%;
+                    text-align: center;
+                }
+                footer ul li a:hover {
+                    color: var(--cinza-hover);
+                }
 
-                    /* Formulário */
+            footer .linha2 {
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                margin: 0px;
+                padding: 10px;
+            }
+                footer .linha2 a {
+                    font-weight: 600px;
+                    font-family: var(--fonte-padrao);
+                    font-size: 18px;
+                    color: white;
+                    text-decoration: none;
+                    padding: 5px;
+                }    
+                footer .linha2 a:first-child{
+                    border-right: 3px solid white;
+                }
+                footer .linha2 a:hover{
+                    color: var(--cinza-hover);
+                }
+    @media only screen and (max-width: 600px) {
 
-                    form {
-                        color: white;
-                        font-size: 30px;
-                        font-weight: 600px;
-                        font-family: var(--fonte-padrao);
-                        width: 600px;
-                    }
-                    .form-group{
-                        display: flex;
-                        flex-direction: column;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                    }
-                    form input {
-                        border-radius: 10px;
-                        border: 0px;
-                        height: 30px;
-                        font-size: 20px;
-                        padding: 10px;
-                        background-color: rgba(255, 255, 255, 0.90);
-                    }
-                    form label {
-                        margin: 10px 0px 10px 0px;
-                    }
-                    form input::placeholder {
-                        color: #39393980;
-                    }
-                    .checkbox-itens label {
-                        font-size: 25px;
-                    }
-                    .checkbox-itens {
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                    }
-                    input[type="checkbox"] {
-                        transform: scale(1.7);
-                    }
-                    input[type="submit"]{
-                        background-color: #0C70F2E5;
-                        width: 100%;
-                        height: 56px;
-                        color: white;
-                        font-size: 32px;
-                        margin-top: 100px;
-                        box-shadow: 0px 6px 4px 0px rgba(12, 112, 242, 0.25);
-                        cursor: pointer;
-                        margin-bottom: 100px;
-                    }
+    /* Menu */
+       
+        #principal {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+        #menu {           
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            margin: 0px;
+        }
+        #menu a {
+            height: 40px;
+        }
+        #principal button {
+            width: 100%;
+            margin: 0px;
+        }
+    
+        /* Section */
+
+        section h1 {
+            font-size: 38px;
+        }
+        section h2 {
+            font-size: 28px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        form {
+            width: 95%;
+            font-size: 20px;
+        }
+        .checkbox-itens label {
+            font-size: 17px;
+        }
+    }
+
+    
+    
